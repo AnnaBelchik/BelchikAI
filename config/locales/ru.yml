@@ -1,0 +1,108 @@
+ru:
+  application:
+    name: Косметологический центр
+  hello: Привет
+  formtastic:
+    :update: 'Обновить %{model}'
+  activerecord:
+    models:
+      comment: Комментарий
+      doctor: Доктор
+      specialization: Специализация
+      service: Услуга
+      record: Запись
+      visit_history: История посещений
+      discount: Скидка
+      direction: Направление
+      client: Клиент
+    attributes:
+      active_admin/comment:
+        resource_type: Тип модели
+        author_type: Автор
+        namespace: Область
+        body: Тело
+        created_at: Создано в
+        updated_at: Обновлено в
+      client:
+        surname: Фамилия
+        forename: Имя
+        middle_name: Отчество
+        phone: Номер телефона
+        birthday: Дата рождения
+        street: Улица
+        number_home: Номер дома
+        number_appartment: Номер квартиры
+        login: Логин
+        created_at: Создано в
+        updated_at: Обновлено в
+      direction:
+        id: Номер
+        name: Название
+        created_at: Создано в
+        updated_at: Обновлено в
+      discount:
+        amount: Скидка в процентах
+        client: Клиент
+        created_at: Создано в
+        updated_at: Обновлено в
+      doctor:
+        surname: Фамилия
+        forname: Имя
+        middle_name: Отчество
+        category: Категория
+        cabinet: Кабинет
+        phone: Номер телефона
+        start_work_time: Начало работы
+        end_work_time: Конец работы
+        day_time: Дни работы
+        login: Логин
+        created_at: Создано в
+        updated_at: Обновлено в
+        specializations: Специализации
+        services: Услуги
+      service:
+        direction: Направление
+        name: Название
+        price: Цена
+        created_at: Создано в
+        updated_at: Обновлено в
+        duration_in_minutes: Продолжительность (в минутах)
+        records: Записи
+        doctors: Доктора
+      specialization:
+        name: Название
+        created_at: Создано в
+        updated_at: Обновлено в
+        doctors: Доктора
+      record:
+        id: Номер
+        service: Услуга
+        record_datetime: Время записи
+        total_cost: Цена
+        doctor: Доктор
+        client: Клиент
+        created_at: Создано в
+        updated_at: Обновлено в
+        services: Услуги
+        visit_history: Посещения
+      visit_history:
+        recommendation: Рекомендации
+        record: Запись
+        created_at: Создано в
+        updated_at: Обновлено в
+  header:
+    all_services: Все услуги
+    stocks: Акции
+    about_us: О центре
+    contacts: Контакты
+    phone: "+375 33 924-23-12"
+    email: cosmetics_brand@gmail.com
+  contacts:
+    title: Контакты
+    subtitle: Контактные данные
+    address: Адрес
+    address_number: Карла Маркса, 6
+    schedule: Режим работы
+    schedule_time: 'Пн-Сб 8:00-20:00'
+  footer:
+    center_name: Косметологический центр

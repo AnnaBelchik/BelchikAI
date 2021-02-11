@@ -1,0 +1,23 @@
+<div class="contacts-page">
+  <h1 class="title"><%=I18n.t('contacts.title') %></h1>
+  <hr>
+  <h2 class="subtitle"><%=I18n.t('contacts.subtitle') %>:</h2>
+  <div class="container">
+    <div class="phone-and-email">
+      <%= link_to t('header.phone'), "tel:#{t('header.phone')}", class: 'phone-number' %>
+      <%= mail_to t('header.email') %>
+    </div>
+    <div class="address-and-work-schedule">
+      <div class="address">
+        <h3><%=I18n.t('contacts.address') %>:</h3>
+        <p><%=I18n.t('contacts.address_number') %></p>
+      </div>
+      <div class="schedule">
+        <h3><%=I18n.t('contacts.schedule') %>:</h3>
+        <p><%=I18n.t('contacts.schedule_time') %></p>
+      </div>
+    </div>
+    <hr>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.0305761229147!2d27.55083825109532!3d53.895660480000124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfc2b5d34529:0x1c45962686ba3513!2z0YPQuy4g0JrQsNGA0LvQsCDQnNCw0YDQutGB0LAgNiwg0JzQuNC90YHQug!5e0!3m2!1sru!2sby!4v1613071964250!5m2!1sru!2sby" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+</div>

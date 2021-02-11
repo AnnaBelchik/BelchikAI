@@ -1,0 +1,17 @@
+<div class="header">
+  <%= image_tag('main_brand.jpg', class: 'left-main-brand') %>
+  <div class="central-links-menu">
+    <div class="all-services">
+      <%= button_to t('header.all_services'), root_path, method: :get, class: 'services-button'%>
+    </div>
+    <%= link_to t('header.contacts'), contacts_path, class: 'contacts' %>
+  </div>
+  <div class="right-header-contacts">
+    <%= link_to t('header.phone'), "tel:#{t('header.phone')}"%>
+    <%- if defined?(current_client).present? %>
+      <%= link_to current_client.forname, clients_path(current_client) %>
+    <%- else %>
+      <%= link_to 'Войти', new_client_path %>
+    <%end %>
+  </div>
+</div>

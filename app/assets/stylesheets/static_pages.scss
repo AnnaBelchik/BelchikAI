@@ -1,0 +1,82 @@
+.header {
+  background-color: #CCCCCC;
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+
+  .left-main-brand {
+    width: 253px;
+    height: 50px;
+    padding-left: 20px;
+  }
+
+  .central-links-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto 0 70px;
+  }
+  .contacts {
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    &:hover{
+      color: #efc997;
+      cursor: pointer;
+    }
+  }
+  .phone-number {
+    text-decoration: none;
+    color: black;
+  }
+  .services-button {
+    font-weight: 600;
+    border: none;
+    transition: background .3s,color .3s;
+    text-decoration: none;
+    text-align: center;
+    width: 145px;
+    height: 40px;
+    background: #fff;
+    border-radius: 20px;
+    &:hover {
+      background-color: #efc997;
+      cursor: pointer;
+    }
+  }
+  .right-header-contacts {
+    margin: auto;
+  }
+}
+
+.contacts-page {
+  padding-top: 5%;
+
+  .phone-and-email {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .address-and-work-schedule {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .container {
+    text-align: left;
+  }
+}
+
+.footer {
+  padding-bottom: 200px;
+  .phone-number {
+    margin-left: 10%;
+  }
+  .description {
+    display: flex;
+    padding-top: 20px;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
