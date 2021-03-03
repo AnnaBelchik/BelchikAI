@@ -1,0 +1,27 @@
+<div class="menu-services-modal" id="menuServicesModal">
+  <div class="all-directions">
+    <h3>Направления</h3>
+    <%- directions.each_with_index do |direction| %>
+      <p><%= link_to direction.name, direction_path(direction) %></p>
+    <% end %>
+  </div>
+  <div class="recent-services">
+    <h3 class="title">Новые услуги</h3>
+    <%- services.where(recent: true).first(6).each_with_index do |service| %>
+      <p><%= link_to service.name, service_path(service) %></p>
+    <% end %>
+  </div>
+  <div class="popular-services">
+    <h3 class="title">Популярные усуги</h3>
+    <%- services.where(popular: true).first(6).each_with_index do |service| %>
+      <p><%= link_to service.name, service_path(service) %></p>
+    <% end %>
+  </div>
+  <div class="make-order">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.0305761174163!2d27.55084361585927!3d53.895660480097845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfc2b5d34529%3A0x1c45962686ba3513!2svulica%20Karla%20Marksa%206%2C%20Minsk!5e0!3m2!1sen!2sby!4v1613939144302!5m2!1sen!2sby" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <br>
+    <div class="make-order-button">
+      <%= link_to "Записаться на приём", new_client_path, class: 'btn btn-bg btn-primary' %>
+    </div>
+  </div>
+</div>

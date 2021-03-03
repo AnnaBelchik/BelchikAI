@@ -11,6 +11,7 @@
 
   <body>
     <%= render partial: 'layouts/header' %>
+    <%= render partial: 'layouts/menu_services_modal', locals: { directions: @directions, services: @services } %>
     <%= yield %>
     <hr>
     <%= render partial: 'layouts/footer' %>

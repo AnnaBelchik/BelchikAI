@@ -1,17 +1,39 @@
 <div class="header">
-  <%= image_tag('main_brand.jpg', class: 'left-main-brand') %>
+  <div class="center-name"><h3><%= link_to t("header.center_name"), root_path %></h3></div>
   <div class="central-links-menu">
     <div class="all-services">
-      <%= button_to t('header.all_services'), root_path, method: :get, class: 'services-button'%>
+      <button class="services-button" id="menuServicesModalControl">
+        <i class="fas fa-bars"></i>
+        <%= t('header.all_services') %>
+      </button>
     </div>
     <%= link_to t('header.contacts'), contacts_path, class: 'contacts' %>
   </div>
   <div class="right-header-contacts">
-    <%= link_to t('header.phone'), "tel:#{t('header.phone')}"%>
-    <%- if defined?(current_client).present? %>
-      <%= link_to current_client.forname, clients_path(current_client) %>
-    <%- else %>
-      <%= link_to 'Войти', new_client_path %>
-    <%end %>
+    <div class="phone-number-container">
+      <%= link_to t('header.phone'), "tel:#{t('header.phone')}", class: "phone-number"%>
+      <%= link_to contacts_path do%>
+        <i class="fas fa-map-marker-alt fa-2x"></i>
+      <% end %>
+    </div>
+    <div class="sign-in-button">
+      <%- if current_client.present? %>
+<!--        <div class="dropdown">-->
+<!--          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"-->
+<!--                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+            <%#= current_client.forename %>
+<!--          </button>-->
+<!--          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+            <%#= link_to "Редактировать профиль", client_path(current_client), class: 'dropdown-item' %>
+            <%#= link_to "Выйти", sign_out_path(current_client), class: 'dropdown-item' %>
+<!--          </div>-->
+<!--        </div>-->
+        <%= link_to current_client.forename, client_path(current_client) %>
+      <%- else %>
+          <%= link_to 'Войти', sign_in_path %>
+      <% end %>
+    </div>
+    <%= link_to "Выйти", sign_out_path(current_client), method: :post %>
   </div>
 </div>
+<%= render partial: 'layouts/menu_services_modal', locals: { directions: @directions, services: @services } %>

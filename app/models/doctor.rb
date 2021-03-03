@@ -2,6 +2,7 @@ class Doctor < ApplicationRecord
   has_and_belongs_to_many :services
   has_and_belongs_to_many :specializations
   has_many :records, dependent: :nullify
+  has_one_attached :avatar
 
   validates :surname, presence: true
   validates :forname, presence: true

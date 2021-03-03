@@ -4,6 +4,7 @@ ru:
   hello: Привет
   formtastic:
     :update: 'Обновить %{model}'
+    :create: 'Создать %{model}'
   activerecord:
     models:
       comment: Комментарий
@@ -14,6 +15,7 @@ ru:
       visit_history: История посещений
       discount: Скидка
       direction: Направление
+      directions: Направления
       client: Клиент
     attributes:
       active_admin/comment:
@@ -38,6 +40,10 @@ ru:
       direction:
         id: Номер
         name: Название
+        image: Изображение
+        services: Услуги
+        image_attachment: Прикрепленное изображение
+        image_blob: Файл
         created_at: Создано в
         updated_at: Обновлено в
       discount:
@@ -56,12 +62,18 @@ ru:
         end_work_time: Конец работы
         day_time: Дни работы
         login: Логин
+        password: Пароль
         created_at: Создано в
         updated_at: Обновлено в
         specializations: Специализации
         services: Услуги
       service:
         direction: Направление
+        description: Описание
+        count_procedures: Количество процедур
+        recent: Новые
+        popular: Популярные
+        contraindication: Противопоказания
         name: Название
         price: Цена
         created_at: Создано в
@@ -91,6 +103,7 @@ ru:
         created_at: Создано в
         updated_at: Обновлено в
   header:
+    center_name: Косметологический центр
     all_services: Все услуги
     stocks: Акции
     about_us: О центре
@@ -106,3 +119,41 @@ ru:
     schedule_time: 'Пн-Сб 8:00-20:00'
   footer:
     center_name: Косметологический центр
+  landing:
+    welcome: Добро пожаловать в наш косметологический центр!
+    description: Мы раскроем все грани вашей красоты
+    discount_title: Акции центра
+    discount_description: Постоянная скидка 3% при посещении 5-ти услуг
+    direction_title: Направления
+    doctor_title: Доктора
+    question_title: Есть вопросы?
+    question_description: Мы ответим на все интересующие Вас вопросы!
+  guest_quesion:
+    inputs:
+      name: Ваше имя
+      phone: Номер телефона
+      question: Вопрос
+      button: Отправить
+  clients:
+    inputs:
+      phone: Телефон
+      password: Пароль
+      sign_in: Войти
+      no_account: У Вас нет аккаунта в нашем косметологическом центре?
+      sign_up: Зарегистрироваться
+      authorization: Вход
+      profile_title: Личные данные
+      save_profile: Сохранить
+      surname: Фамилия
+      forname: Имя
+      middle_name: Отчество
+      birthday: Дата рождения
+      street: Улица
+      number_home: Номер дома
+      number_appartment: Номер квартиры
+      registration: Регистрация
+      cabinet: каб.
+    records: Записи на приём
+    history: История посещений
+    no_records: У Вас нет записей на приём
+    no_history: У Вас нет посещений

@@ -1,0 +1,16 @@
+<div class="sign-in-form-container">
+  <%= bootstrap_form_with model: @client, url: '/check_sign_in' do |f| %>
+    <div class="sign-in-form">
+      <h3><%= t('clients.inputs.authorization') %></h3>
+      <%= f.text_field :phone, bootstrap: { label: { hide: true} },
+                       placeholder: t('clients.inputs.phone'), class: 'form-control' %>
+      <%= f.text_field :password,  bootstrap: { label: { hide: true} },
+                       placeholder: t('clients.inputs.password'), class: 'form-control' %>
+    </div>
+    <div class="guest-question-submit">
+      <%= f.submit t('clients.inputs.sign_in'), class: 'btn btn-bg btn-primary' %>
+    </div>
+    <p><%= t('clients.inputs.no_account') %></p>
+    <p><%= link_to t('clients.inputs.sign_up'), new_client_path %></p>
+  <% end %>
+</div>

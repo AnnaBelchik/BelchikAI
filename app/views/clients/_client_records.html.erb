@@ -1,0 +1,46 @@
+<hr>
+<div class="current-records">
+  <h1><%= t('clients.records') %></h1>
+  <%- if records.where('record_datetime >= (?)', Time.zone.now).blank? %>
+    <%= t('clients.no_records') %>
+  <%- else %>
+    <%- records.where('record_datetime >= (?)', Time.zone.now).each do |record| %>
+      <table class="table">
+        <tr>
+          <td><%= record.service&.name %></td>
+          <td><%= record.record_datetime&.strftime('%d.%m.%Y') %></td>
+          <td><%= record.record_datetime&.strftime('%H:%M') %></td>
+          <td><%= record.total_cost %></td>
+          <td><%= "#{record.doctor.surname} #{record.doctor.forname} #{record.doctor.middle_name}" %></td>
+          <td><%= "#{t('clients.inputs.cabinet')} #{record.doctor.cabinet}" %></td>
+          <td><%= record.total_cost %></td>
+          <%- if record.record_datetime.present? && record.record_datetime - 1.hour > Time.now && !record.canceled %>
+            <td><%= link_to 'Отменить', record_cancel_path(record_id: record.id), method: :post %></td>
+          <%- else %>
+            <td>Нельзя отменить</td>
+          <% end %>
+        </tr>
+      </table>
+      <br>
+    <% end %>
+  <% end %>
+</div>
+<div class="completed-records">
+  <h1><%= t('clients.history') %></h1>
+  <%- if records.where('record_datetime < (?)', Time.zone.now).blank? %>
+    <%= t('clients.no_history') %>
+  <%- else %>
+    <%- records.where('record_datetime < (?)', Time.zone.now).each do |record| %>
+      <table class="table">
+        <tr>
+          <td><%= record.service&.name %></td>
+          <td><%= record.record_datetime&.strftime('%d.%m.%Y %H:%M') %></td>
+          <td><%= "#{record.doctor.surname} #{record.doctor.forname} #{record.doctor.middle_name}" %></td>
+          <td><%= record.visit_history&.recommendation %></td>
+        </tr>
+      </table>
+      <br>
+    <% end %>
+  <% end %>
+
+</div>

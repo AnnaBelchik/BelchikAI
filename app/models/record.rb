@@ -21,4 +21,8 @@ class Record < ApplicationRecord
        record.id]
     end
   end
+
+  def cancel
+    self.update!(canceled: true)
+  end
 end

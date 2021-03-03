@@ -1,0 +1,67 @@
+.sign-in-form-container {
+  border: 1px solid black;
+  text-align: center;
+  margin: auto;
+  width: 40%;
+  margin-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  font-size: 18px;
+  .sign-in-form {
+    text-align: center;
+
+    .form-group {
+      .form-control {
+        margin: auto;
+        width: 50%;
+      }
+    }
+  }
+}
+
+.profile-page-container {
+  border: 1px solid black;
+  text-align: center;
+  margin: auto;
+  width: 40%;
+  margin-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  font-size: 18px;
+  .profile-page-form {
+    text-align: center;
+
+    .form-group {
+      .form-control {
+        margin: auto;
+        width: 50%;
+      }
+    }
+  }
+}
+
+.current-records {
+  table {
+    table-layout: fixed ;
+    width: 100%;
+    tr {
+      th {
+        width: 25%;
+      }
+    }
+  }
+}
+
+.completed-records {
+  table {
+    table-layout: fixed ;
+    width: 100%;
+    tr {
+      th {
+        width: 25%;
+      }
+    }
+  }
+}

@@ -39,7 +39,7 @@ Rails.application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
-  # Raise an error on page load if there are pending migrations.
+  # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
 
   # Highlight code that triggered database queries in logs.
@@ -52,6 +52,7 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+  config.hosts << '1520f5ca6836.ngrok.io'
 
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true

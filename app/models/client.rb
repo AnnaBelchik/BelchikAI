@@ -13,4 +13,8 @@ class Client < ApplicationRecord
       ["#{client.surname} #{client.forename}", client.id]
     end
   end
+
+  def check_sign_in(imposed_password)
+    password == imposed_password
+  end
 end

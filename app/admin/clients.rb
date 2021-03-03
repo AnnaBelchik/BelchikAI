@@ -1,6 +1,6 @@
 ActiveAdmin.register Client do
   permit_params :surname, :forename, :middle_name, :birthday, :street, :number_home,
-                :number_appartment, :phone, :login, :password, :created_at, :updated_at
+                :number_appartment, :phone, :login, :password
 
   index do
     selectable_column

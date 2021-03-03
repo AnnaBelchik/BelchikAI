@@ -1,5 +1,9 @@
 class StaticPagesController < ApplicationController
-  def landing;end
+  before_action :set_main_data
 
-  def contacts;end
+  def landing
+  end
+
+  def contacts
+  end
 end

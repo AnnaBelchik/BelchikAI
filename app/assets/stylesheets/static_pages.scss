@@ -1,8 +1,65 @@
+.menu-services-modal {
+  display: none;
+  position: relative;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #ffffff;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+  .all-directions {
+    border-right: 1px solid black;
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-top: 1%;
+  }
+  .recent-services {
+    border-right: 1px solid black;
+    padding-right: 6%;
+    padding-left: 6%;
+    padding-top: 1%;
+    text-align: left;
+
+    .title {
+      white-space: nowrap;
+    }
+  }
+  .popular-services {
+    border-right: 1px solid black;
+    padding-right: 6%;
+    padding-left: 6%;
+    padding-top: 1%;
+    text-align: left;
+
+    .title {
+      white-space: nowrap;
+    }
+  }
+  .make-order {
+    padding: 1% 2% 2% 2%;
+    text-align: center;
+    .make-order-button {
+      padding-top: 20px;
+    }
+  }
+}
 .header {
   background-color: #CCCCCC;
-  padding-top: 30px;
+  padding: 10px 10px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 10;
+
+  .center-name {
+    padding-left: 20%;
+    padding-right: 10%;
+    width: 30px;
+    white-space: nowrap;
+  }
 
   .left-main-brand {
     width: 253px;
@@ -12,10 +69,10 @@
 
   .central-links-menu {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     margin: 0 auto 0 70px;
   }
+
   .contacts {
     margin-left: 30px;
     text-decoration: none;
@@ -25,10 +82,6 @@
       color: #efc997;
       cursor: pointer;
     }
-  }
-  .phone-number {
-    text-decoration: none;
-    color: black;
   }
   .services-button {
     font-weight: 600;
@@ -45,8 +98,35 @@
       cursor: pointer;
     }
   }
+  .sign-in-button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    border: none;
+    transition: background .3s,color .3s;
+    width: 145px;
+    height: 40px;
+    background: #fff;
+    border-radius: 20px;
+    margin-left: 20px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    &:hover {
+      background-color: #efc997;
+      cursor: pointer;
+    }
+  }
   .right-header-contacts {
-    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-right: 10%;
+    .phone-number {
+      text-decoration: none;
+      color: black;
+    }
   }
 }
 
@@ -70,13 +150,147 @@
 
 .footer {
   padding-bottom: 200px;
-  .phone-number {
-    margin-left: 10%;
-  }
+  padding-left: 50px;
   .description {
-    display: flex;
     padding-top: 20px;
     width: 100%;
-    justify-content: space-around;
+  }
+  .contact-info {
+    .phone-number {
+      padding-left: 200px;
+    }
+  }
+  .direction-center-description {
+    padding-top: 1%;
+    display: flex;
+    .center-name {
+      width: 200px;
+    }
+  }
+  .direction-name-title {
+    padding-left: 130px;
+    .directions-name-container {
+      .directions-name {
+        padding-top: 20px;
+      }
+      display: flex;
+    }
+  }
+}
+
+.landing {
+  .welcome-container {
+    display: flex;
+    background-image: url('fon3.jpg');
+    width: 100%;
+    background-size: 100%;
+    background-position-y: center;
+    height: 700px;
+    z-index: 2;
+
+    .content {
+      padding-top: 15%;
+      padding-left: 20%;
+      .welcome-message {
+        width: 500px;
+      }
+    }
+  }
+  .discount-container {
+    .discount-title {
+      text-align: center;
+    }
+
+    .discount-description {
+      padding-left: 20%;
+      padding-right: 20%;
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  .directions-container {
+    padding-top: 3%;
+    .directions-title {
+      text-align: center;
+      color: grey;
+    }
+    .directions-description {
+      padding-left: 20%;
+      padding-right: 20%;
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+      .card {
+        margin: 30px
+      }
+    }
+  }
+  .doctors-container {
+    padding-top: 3%;
+    .doctors-title {
+      text-align: center;
+      color: grey;
+    }
+    .doctors-description {
+      padding-left: 20%;
+      padding-right: 20%;
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+      .card {
+        margin: 30px
+      }
+    }
+  }
+  .question-container {
+    padding-top: 3%;
+    .question-title {
+      text-align: center;
+    }
+    .question-description {
+      padding-left: 20%;
+      padding-right: 20%;
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.question-container {
+  padding-top: 3%;
+  .question-text-description {
+    padding-left: 20%;
+    text-align: left;
+  }
+  .question-description {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 1%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    .guest-question-info {
+      display: flex;
+      .form-group {
+        .form-control {
+          width: 300px;
+        }
+      }
+      .phone-number {
+        padding-left: 50px;
+      }
+    }
+    .guest-question-text {
+      .form-group {
+        .form-control {
+          width: 650px;
+          height: 150px;
+        }
+      }
+    }
   }
 }

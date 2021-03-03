@@ -1,34 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Surname:</strong>
-  <%= @client.surname %>
-</p>
+<div class="profile-page-container">
+  <h1><%= t('clients.inputs.profile_title') %></h1>
 
-<p>
-  <strong>Forename:</strong>
-  <%= @client.forename %>
-</p>
-
-<p>
-  <strong>Middle name:</strong>
-  <%= @client.middle_name %>
-</p>
-
-<p>
-  <strong>Birthday:</strong>
-  <%= @client.birthday %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @client.phone %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @client.password %>
-</p>
-
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+  <%= bootstrap_form_with(model: @client, local: true) do |form| %>
+      <div class="profile-page-form">
+        <%= form.text_field :surname, bootstrap: { label: { hide: true} }, placeholder: t('clients.inputs.surname') %>
+        <%= form.text_field :forename, bootstrap: { label: { hide: true} }, placeholder: t('clients.inputs.forname') %>
+        <%= form.text_field :middle_name, bootstrap: { label: { hide: true} },
+                            placeholder: t('clients.inputs.middle_name') %>
+        <%= form.date_select :birthday, bootstrap: { label: { hide: true} }, placeholder: t('clients.inputs.birthday') %>
+        <%= form.text_field :street, bootstrap: { label: { hide: true} }, placeholder: t('clients.inputs.street') %>
+        <%= form.number_field :number_home, bootstrap: { label: { hide: true} },
+                              placeholder: t('clients.inputs.number_home') %>
+        <%= form.text_field :number_appartment, bootstrap: { label: { hide: true} },
+                            placeholder: t('clients.inputs.number_appartment') %>
+        <%= form.text_field :phone, bootstrap: { label: { hide: true} }, placeholder: t('clients.inputs.phone') %>
+        <%= form.text_field :password, bootstrap: { label: { hide: true} },
+                            placeholder: t('clients.inputs.password'), type: 'password' %>
+        <%= form.submit t('clients.inputs.save_profile'), class: 'btn btn-bg btn-primary' %>
+      </div>
+  <% end %>
+</div>
+<%= render partial: 'clients/client_records', locals: { records: @client.records } %>
