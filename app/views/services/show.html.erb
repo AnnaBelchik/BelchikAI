@@ -1,0 +1,39 @@
+<div class="service-show">
+  <div class="service-container">
+    <div class="service-text">
+      <div class="service-title">
+        <h2><%= @service.name %></h2>
+      </div>
+      <div class="service-cost"><%= @service.price.to_s %> BYN</div>
+      <div class="service-small-description">
+        <div class="service-duration"><i class="far fa-clock"></i> <%= @service.duration_in_minutes %> мин</div>
+        <div class="service-recommended-count"><i class="far fa-calendar"></i> <%= @service.count_procedures %></div>
+      </div>
+      <%= link_to 'Записаться на прием', new_record_path(service_id: @service.id), class: 'btn btn-bg btn-success' %>
+    </div>
+  </div>
+  <div class="description-buttons">
+    <a class="description-control" data-toggle="collapse" href="#collapseDescription"
+       role="button" aria-expanded="false" aria-controls="collapseDescription">
+      О процедуре
+    </a>
+    <a class="contraindication-control" data-toggle="collapse" href="#collapseContraindication"
+       role="button" aria-expanded="false" aria-controls="collapseContraindication">
+      Противопоказания
+    </a>
+  </div>
+  <div class="collapse" id="collapseDescription">
+    <div class="collapse-description">
+      <%= @service.description %>
+    </div>
+  </div>
+  <div class="collapse" id="collapseContraindication">
+    <div class="collapse-description">
+      <ul>
+        <%- @service.contraindication.split(',').each do |contraindication| %>
+          <li><%= contraindication %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

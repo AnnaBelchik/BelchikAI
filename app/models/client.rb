@@ -8,6 +8,10 @@ class Client < ApplicationRecord
   validates :phone, presence: true, uniqueness: true, phone: true
   validates :password, presence: true, length: { in: 6..20 }
 
+  def full_name
+    "#{surname} #{forename} #{middle_name}"
+  end
+
   def self.options_for_select
     all.map do |client|
       ["#{client.surname} #{client.forename}", client.id]

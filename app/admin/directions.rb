@@ -1,5 +1,5 @@
 ActiveAdmin.register Direction do
-  permit_params :name, :image, :recent, :popular
+  permit_params :name, :image, :recent, :popular, :description
 
   index do
     selectable_column
@@ -7,13 +7,15 @@ ActiveAdmin.register Direction do
       event.image.attached? && link_to(image_tag(event.image, height: '100'))
     end
     column :name
+    column :description
     actions
   end
 
   form do |f|
     f.inputs I18n.translate('activerecord.models.direction') do
-      input :image, as: :file
+      input :image, as: :file, hint: image_tag(object.image, height: '100')
       input :name
+      input :description
     end
     f.actions
   end

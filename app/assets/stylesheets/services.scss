@@ -1,0 +1,51 @@
+.service-show {
+  .service-container {
+    background-color: #fff2e5;
+    display: flex;
+    padding-bottom: 30px;
+    .service-text {
+      padding-top: 5%;
+      padding-left: 15%;
+      margin-right: 50px;
+      .btn {
+        margin-top: 20px;
+      }
+      .service-title {
+
+      }
+      .service-cost {
+        font-size: 20px;
+        padding-top: 10px;
+      }
+      .service-small-description {
+        display: flex;
+        font-size: 20px;
+        padding-top: 10px;
+        .service-duration {
+
+        }
+        .service-recommended-count {
+          padding-left: 70px;
+        }
+      }
+    }
+  }
+  .description-buttons {
+    padding-top: 30px;
+    padding-left: 3%;
+    font-size: 18px;
+    a {
+      color: #4d4d4d;
+    }
+    .contraindication-control {
+      padding-left: 20px;
+    }
+  }
+  .collapse {
+    .collapse-description {
+      padding-top: 10px;
+      padding-left: 3%;
+      width: 60%;
+    }
+  }
+}

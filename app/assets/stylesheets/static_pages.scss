@@ -12,16 +12,22 @@
   font-size: 18px;
   .all-directions {
     border-right: 1px solid black;
-    padding-right: 8%;
-    padding-left: 8%;
+    padding-right: 5%;
+    padding-left: 5%;
     padding-top: 1%;
+    a {
+      color: #4d4d4d;
+    }
   }
   .recent-services {
     border-right: 1px solid black;
-    padding-right: 6%;
-    padding-left: 6%;
+    padding-right: 5%;
+    padding-left: 5%;
     padding-top: 1%;
     text-align: left;
+    a {
+      color: #4d4d4d;
+    }
 
     .title {
       white-space: nowrap;
@@ -29,10 +35,13 @@
   }
   .popular-services {
     border-right: 1px solid black;
-    padding-right: 6%;
-    padding-left: 6%;
+    padding-right: 5%;
+    padding-left: 5%;
     padding-top: 1%;
     text-align: left;
+    a {
+      color: #4d4d4d;
+    }
 
     .title {
       white-space: nowrap;
@@ -47,7 +56,7 @@
   }
 }
 .header {
-  background-color: #CCCCCC;
+  background-color: white;
   padding: 10px 10px;
   display: flex;
   align-items: center;
@@ -55,9 +64,9 @@
   z-index: 10;
 
   .center-name {
-    padding-left: 20%;
+    width: 400px;
     padding-right: 10%;
-    width: 30px;
+    margin-left: 35px;
     white-space: nowrap;
   }
 
@@ -85,7 +94,6 @@
   }
   .services-button {
     font-weight: 600;
-    border: none;
     transition: background .3s,color .3s;
     text-decoration: none;
     text-align: center;
@@ -93,6 +101,7 @@
     height: 40px;
     background: #fff;
     border-radius: 20px;
+    border: 1px solid black;
     &:hover {
       background-color: #efc997;
       cursor: pointer;
@@ -103,13 +112,13 @@
     display: flex;
     justify-content: center;
     font-weight: 600;
-    border: none;
     transition: background .3s,color .3s;
     width: 145px;
     height: 40px;
     background: #fff;
     border-radius: 20px;
     margin-left: 20px;
+    border: 1px solid black;
     a {
       text-decoration: none;
       color: black;
@@ -216,13 +225,15 @@
       color: grey;
     }
     .directions-description {
-      padding-left: 20%;
-      padding-right: 20%;
+      padding-left: 10%;
+      padding-right: 10%;
       display: flex;
       align-content: center;
+      justify-content: center;
       flex-wrap: wrap;
       .card {
-        margin: 30px
+        margin: 30px;
+        border: 1px solid grey;
       }
     }
   }
@@ -233,13 +244,15 @@
       color: grey;
     }
     .doctors-description {
-      padding-left: 20%;
-      padding-right: 20%;
+      padding-left: 10%;
+      padding-right: 10%;
       display: flex;
       align-content: center;
+      justify-content: center;
       flex-wrap: wrap;
       .card {
-        margin: 30px
+        border: 1px solid grey;
+        margin: 30px;
       }
     }
   }
@@ -292,5 +305,11 @@
         }
       }
     }
+  }
+}
+
+.directions-description {
+  .card-img-top {
+    height: 220px;
   }
 }

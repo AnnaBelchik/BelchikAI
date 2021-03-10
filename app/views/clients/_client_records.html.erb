@@ -10,10 +10,9 @@
           <td><%= record.service&.name %></td>
           <td><%= record.record_datetime&.strftime('%d.%m.%Y') %></td>
           <td><%= record.record_datetime&.strftime('%H:%M') %></td>
-          <td><%= record.total_cost %></td>
+          <td><%= record.total_cost %> руб</td>
           <td><%= "#{record.doctor.surname} #{record.doctor.forname} #{record.doctor.middle_name}" %></td>
           <td><%= "#{t('clients.inputs.cabinet')} #{record.doctor.cabinet}" %></td>
-          <td><%= record.total_cost %></td>
           <%- if record.record_datetime.present? && record.record_datetime - 1.hour > Time.now && !record.canceled %>
             <td><%= link_to 'Отменить', record_cancel_path(record_id: record.id), method: :post %></td>
           <%- else %>

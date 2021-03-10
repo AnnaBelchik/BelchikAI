@@ -1,0 +1,13 @@
+<%- doctors.each do |doctor| %>
+  <div class="card" style="width: 18rem;">
+    <%= image_tag(doctor.avatar, class: "card-img-top") if doctor.avatar.attached?%>
+    <div class="card-body">
+      <h5 class="card-title"><%= doctor.full_name %></h5>
+      <%- doctor.specializations.each do |specialization| %>
+        <%= specialization.name %>
+      <% end %>
+      <br>
+      <%= doctor.category %>
+    </div>
+  </div>
+<% end %>

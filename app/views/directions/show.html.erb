@@ -1,0 +1,28 @@
+<div class="direction-show">
+  <div class="direction-container">
+    <div class="direction-text">
+      <div class="direction-title">
+        <h2><b><%= @direction.name %></b></h2>
+      </div>
+      <div class="direction-description ">
+        <h5><%= @direction.description %></h5>
+      </div>
+    </div>
+    <div class="direction-image">
+      <%= image_tag(@direction.image) %>
+    </div>
+  </div>
+  <hr>
+  <div class="direction-services">
+    <div class="services-title"><h2><%= t('activerecord.models.services') %></h2></div>
+    <div class="direction-services-container">
+      <%= render partial: 'directions/direction_services', locals: { services: @direction.services } %>
+    </div>
+  </div>
+  <div class="direction-doctors">
+    <div class="doctors-title"><h2><%= t('activerecord.models.doctors') %></h2></div>
+    <div class="direction-doctors-container">
+      <%= render partial: 'directions/direction_doctors', locals: { doctors: doctors_from_direction(@direction)} %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+.direction-show {
+  .direction-container {
+    background-color: #fff2e5;
+    display: flex;
+    .direction-text {
+      padding-top: 5%;
+      padding-left: 15%;
+      margin-right: 50px;
+      .direction-title {
+
+      }
+      .direction-description {
+        padding-top: 20px;
+        width: 80%;
+      }
+    }
+    .direction-image {
+      padding-top: 3%;
+      padding-bottom: 3%;
+      padding-right: 15%;
+      img {
+        width: 500px;
+        height: 300px;
+      }
+    }
+  }
+  .direction-services {
+    .services-title {
+      text-align: center;
+    }
+  }
+  hr {
+    margin-top: 0;
+  }
+  .direction-services-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .card {
+      margin: 30px
+    }
+  }
+  .direction-doctors {
+    .doctors-title {
+      text-align: center;
+    }
+  }
+  .direction-doctors-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    .card {
+      margin: 30px
+    }
+  }
+}

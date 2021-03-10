@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<div class="record-page-container">
+  <h1><%= t('records.inputs.new_record') %></h1>
+
+  <%= bootstrap_form_with(model: @record, local: true) do |form| %>
+    <div class="record-page-form">
+      <%- if @service.blank? %>
+        <%= form.select :direction_id, Direction.options_for_select, bootstrap: { label: { hide: true } },
+                        include_blank: t('records.selects.direction')%>
+        <%= form.select :service_id, @select_services || Service.options_for_select, bootstrap: { label: { hide: true} },
+                        include_blank: t('records.selects.service') %>
+      <% else %>
+        <h4><%= @service.name %></h4>
+        <%= form.hidden_field :service_id, value: @service.id %>
+      <% end %>
+      <%= form.select :doctor_id, @select_doctors || Doctor.options_for_select, bootstrap: { label: { hide: true} },
+                      include_blank: t('records.selects.doctor') %>
+      <%= form.date_field :date_record, bootstrap: { label: { hide: true} }, min: Date.today %>
+      <%= form.select :time_record, ['12:23'], bootstrap: { label: { hide: true} } %>
+      <h5>Стоимость: <%= @service.price %> руб</h5>
+      <%= form.submit t('records.inputs.create_record'), class: 'btn btn-success' %>
+    </div>
+  <% end %>
+</div>
+

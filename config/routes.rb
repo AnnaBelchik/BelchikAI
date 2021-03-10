@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post 'sign_out', to: 'clients#sign_out'
   post 'check_sign_in', to: 'clients#check_sign_in'
   resources :clients
-  resources :directions
+  resources :directions, only: :show
   resources :doctors
   resources :guest_questions
   resources :services

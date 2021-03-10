@@ -17,6 +17,8 @@ ru:
       direction: Направление
       directions: Направления
       client: Клиент
+      services: Услуги
+      doctors: Врачи
     attributes:
       active_admin/comment:
         resource_type: Тип модели
@@ -41,6 +43,7 @@ ru:
         id: Номер
         name: Название
         image: Изображение
+        description: Кристал и Моёт
         services: Услуги
         image_attachment: Прикрепленное изображение
         image_blob: Файл
@@ -120,7 +123,7 @@ ru:
   footer:
     center_name: Косметологический центр
   landing:
-    welcome: Добро пожаловать в наш косметологический центр!
+    welcome: Добро пожаловать в наш центр!
     description: Мы раскроем все грани вашей красоты
     discount_title: Акции центра
     discount_description: Постоянная скидка 3% при посещении 5-ти услуг
@@ -157,3 +160,12 @@ ru:
     history: История посещений
     no_records: У Вас нет записей на приём
     no_history: У Вас нет посещений
+  records:
+    inputs:
+      new_record: Запись на прием
+      create_record: Записаться на приём
+    selects:
+      direction: Выберите направление
+      service: Выберите услугу
+      doctor: Выберите врача
+      time: Выберите время

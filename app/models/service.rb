@@ -2,6 +2,7 @@ class Service < ApplicationRecord
   belongs_to :direction
   has_and_belongs_to_many :records
   has_and_belongs_to_many :doctors
+  has_one_attached :image
 
   validates :name, presence: true
   validates :price, presence: true

@@ -1,0 +1,9 @@
+<%- services.each do |service| %>
+  <div class="card" style="width: 18rem;">
+    <%= image_tag(service.image, class: "card-img-top") if service.image.attached?%>
+    <div class="card-body">
+      <h5 class="card-title"><%= service.name %></h5>
+      <%= link_to '+', service_path(service), class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>

@@ -6,9 +6,22 @@ ActiveAdmin.register Record do
       input :doctor, as: :select, collection: Doctor.options_for_select
       input :client, as: :select, collection: Client.options_for_select
       input :service, as: :select, collection: Service.options_for_select
-      input :canceled
-      input :record_datetime, as: :date_time_picker
+      input :record_datetime, as: :datetime_picker
     end
     f.actions
+  end
+
+  index do
+    selectable_column
+    column :record_datetime
+    column :total_cost
+    column :doctor do |record|
+      record.doctor.full_name
+    end
+    column :client do |record|
+      record.client.full_name
+    end
+    column :service
+    actions
   end
 end

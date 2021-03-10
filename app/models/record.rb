@@ -23,6 +23,6 @@ class Record < ApplicationRecord
   end
 
   def cancel
-    self.update!(canceled: true)
+    update!(canceled: true)
   end
 end
